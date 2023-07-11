@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+#Sourcing is required due to alias expansion happening before parameter expansion
+source ~/dev/CheatSheets/.bashrc-CheatSheets
+for entry in *.pdf; do
+    alias_name=${entry%.*}_CheatSheet
+    entry_path="$(pwd)/$entry"
+    echo "$alias_name=evince $entry"
+    alias "$alias_name=evince $entry"
+done

@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+#Init
+git_init() {
+    #Create initial repository and standard Development branch
+    git init
+    git branch "Development"
+    
+    #Create Branch for 1.0 release (MVP)
+    
+    parent_dir="$(dirname $(pwd))"
+    parent_dir_name='${parent_dir##*/}'
+    git branch "$parent_dir_name"
+    
+    #Create Necessary files
+    touch .gitignore
+    
+}
+
+#Merging
+git_merge() {
+    git merge --no-ff "$1"
+
+    #How can we make sure there are no git conflicts to remove the old branch?
+}
+
+

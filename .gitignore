@@ -1,0 +1,4 @@
+#Repositories are wonderful, but I don't need storages of storages.
+
+Repositories/*
+!Repositories/.bashrc-Repositories

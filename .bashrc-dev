@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+#Copy-paste this into home bashrc to enable this and all dev bashrc's on terminal init
+#[ -f ~/dev/.bashrc-dev ] && ~/dev/.bashrc-dev
+#This is assuming of course that you haven't ran dev_install or are having troubles
+
+
+#Init the other .bashrc's
+[ -f ~/dev/.bashrc-git ] && ~/dev/.bashrc-git
+[ -f ~/dev/CheatSheets/.bashrc-CheatSheets ] && ~/dev/CheatSheets/.bashrc-CheatSheets
+[ -f ~/dev/Repositories/.bashrc-Repositories ] && ~/dev/Repositories/.bashrc-Repositories
+
+

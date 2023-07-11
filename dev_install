@@ -1,0 +1,9 @@
+#This is an install file that is only meant to be ran once to set up the workspace for the development environment
+
+personal_bashrc='.bashrc-personal'
+personal_bashrc_modification='#Link to dev environment
+>[ -f ~/dev.bashrc-dev ] && ~/dev/.bashrc-dev'
+
+if [ -f ~/.bashrc-personal ]; then
+    $personal_bashrc_modification >> $personal_bashrc
+else
