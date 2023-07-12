@@ -1,10 +1,14 @@
 #!/usr/bin/env bash
 
-#Sourcing is required due to alias expansion happening before parameter expansion
-source ~/dev/CheatSheets/.bashrc-CheatSheets
-for entry in *.pdf; do
-    alias_name=${entry%.*}_CheatSheet
-    entry_path="$(pwd)/$entry"
-    echo "$alias_name=evince $entry"
-    alias "$alias_name=evince $entry"
+
+folder='/home/andrewm/dev/CheatSheets/*'
+
+for file in $folder; do
+	truncated_file_path=${file##*/}
+	truncated_file_extension=${truncated_file_path%%.*}
+	alias_name=$truncated_file_extension'_CheatSheet'
+	echo $alias_name
+	echo $file
+	alias $alias_name="evince $file"
 done
+

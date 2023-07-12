@@ -7,7 +7,7 @@
 
 #Init the other .bashrc's
 [ -f ~/dev/.bashrc-git ] && ~/dev/.bashrc-git
-[ -f ~/dev/CheatSheets/.bashrc-CheatSheets ] && ~/dev/CheatSheets/.bashrc-CheatSheets
+[ -f ~/dev/CheatSheets/.bashrc-CheatSheets ] && source ~/dev/CheatSheets/.bashrc-CheatSheets
 [ -f ~/dev/Repositories/.bashrc-Repositories ] && ~/dev/Repositories/.bashrc-Repositories
 
 
